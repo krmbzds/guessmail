@@ -1,8 +1,48 @@
 # Guessmail
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/guessmail`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Travis](https://img.shields.io/travis/krmbzds/guessmail.svg)](https://travis-ci.org/krmbzds/guessmail)
+[![Code Climate](https://img.shields.io/codeclimate/github/krmbzds/guessmail.svg)](https://codeclimate.com/github/krmbzds/guessmail)
+[![Gem](https://img.shields.io/gem/dt/guessmail.svg)](https://rubygems.org/gems/guessmail)
+[![Gem](https://img.shields.io/gem/v/guessmail.svg)](https://rubygems.org/gems/guessmail)
 
-TODO: Delete this and the text above, and describe your gem
+**guessmail** helps you find possible email addresses of a person.
+
+## Examples
+
+Let's say you want to find the email address of Bill Gates.
+
+```sh
+guessmail Bill Gates microsoft.com  
+```
+
+This will return you a set of possible emails:
+
+```
+bill@microsoft.com
+gates@microsoft.com
+billgates@microsoft.com
+bill.gates@microsoft.com
+bgates@microsoft.com
+b.gates@microsoft.com
+billg@microsoft.com    <-- This is his email address by the way.
+bill.g@microsoft.com
+bg@microsoft.com
+b.g@microsoft.com
+gatesbill@microsoft.com
+gates.bill@microsoft.com
+gatesb@microsoft.com
+gates.b@microsoft.com
+gbill@microsoft.com
+g.bill@microsoft.com
+gb@microsoft.com
+g.b@microsoft.com
+```
+
+You can then use an email verifier service or use other methods to find out which one of these email addresses belong to the person you are searching for. Let's not get into that here.
+
+## Is it any good?
+
+Yes.
 
 ## Installation
 
@@ -14,23 +54,35 @@ gem 'guessmail'
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install guessmail
+```sh
+$ gem install guessmail
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: guessmail first [middle] last domain
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Examples
+  guessmail Yukihiro Matz Matsumoto ruby-lang.org
+  guessmail Satoshi Nakamoto gmx.de
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/guessmail.
+1. Fork it (https://github.com/krmbzds/guessmail/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
+## License
+
+The MIT License (MIT)  
+Copyright (c) 2016 Kerem Bozdas
