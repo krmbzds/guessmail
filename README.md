@@ -7,6 +7,16 @@
 
 **guessmail** helps you find possible email addresses of a person.
 
+## Usage
+
+```
+Usage: guessmail first [middle] last domain
+
+Examples
+  guessmail Yukihiro Matz Matsumoto ruby-lang.org
+  guessmail Satoshi Nakamoto gmx.de
+```
+
 ## Examples
 
 Let's say you want to find the email address of Bill Gates.
@@ -62,16 +72,6 @@ Or install it yourself as:
 
 ```sh
 $ gem install guessmail
-```
-
-## Usage
-
-```
-Usage: guessmail first [middle] last domain
-
-Examples
-  guessmail Yukihiro Matz Matsumoto ruby-lang.org
-  guessmail Satoshi Nakamoto gmx.de
 ```
 
 ## Contributing
