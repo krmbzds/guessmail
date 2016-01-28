@@ -1,5 +1,5 @@
 require "guessmail/version"
 
 module Guessmail
-  # Your code goes here...
+  # I do nothing
 end
