@@ -22,7 +22,7 @@ Examples
 Let's say you want to find the email address of Bill Gates.
 
 ```sh
-guessmail Bill Gates microsoft.com  
+$ guessmail Bill Gates microsoft.com  
 ```
 
 This will return you a set of possible emails:
@@ -34,7 +34,7 @@ billgates@microsoft.com
 bill.gates@microsoft.com
 bgates@microsoft.com
 b.gates@microsoft.com
-billg@microsoft.com    <-- This is his email address by the way.
+billg@microsoft.com    <-- This is his email address by the way
 bill.g@microsoft.com
 bg@microsoft.com
 b.g@microsoft.com
