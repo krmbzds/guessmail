@@ -1,7 +1,6 @@
 # Guessmail
 
 [![Travis](https://img.shields.io/travis/krmbzds/guessmail.svg)](https://travis-ci.org/krmbzds/guessmail)
-[![Code Climate](https://img.shields.io/codeclimate/github/krmbzds/guessmail.svg)](https://codeclimate.com/github/krmbzds/guessmail)
 [![Gem](https://img.shields.io/gem/dt/guessmail.svg)](https://rubygems.org/gems/guessmail)
 [![Gem](https://img.shields.io/gem/v/guessmail.svg)](https://rubygems.org/gems/guessmail)
 
