@@ -1,38 +1,41 @@
 #!/usr/bin/env ruby
-# encoding: UTF-8
+# frozen_string_literal: true
 
 lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
 $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
-require 'tate'
-require 'templates'
+require 'guessmail'
+require 'optparse'
 
-@help = '
-  Usage: guessmail first [middle] last domain
+options = {}
 
-  Examples
-    guessmail Yukihiro Matz Matsumoto ruby-lang.org
-    guessmail Satoshi Nakamoto gmx.de
-    
-'
-
-def main
-  args = ARGV.map { |x| Tate.transliterate(x.downcase) }  # tate'd
-
-  case args.length
-  when 3
-    fn, ln = args.values_at(0, 1)
-    fi, li = fn[0], ln[0]
-    dn = args[2]
-    STDOUT.write $FL % {fn: fn, ln: ln, fi: fi, li: li, dn: dn}
-  when 4
-    fn, mn, ln = args.values_at(0, 1, 2)
-    fi, mi, li = fn[0], mn[0], ln[0]
-    dn = args[3]
-    STDOUT.write $FML % {fn: fn, mn: mn, ln: ln, fi: fi, mi: mi, li: li, dn: dn}
-  else
-    STDOUT.write @help
+option_parser = OptionParser.new do |opts|
+  opts.banner = 'Usage: guessmail [-e] [-l LANGUAGE] first [middle] last domain'
+  opts.on('-e', '--extended', 'Include less common email combinations') do
+    options[:extended] = true
+  end
+  opts.on('-l LANGUAGE', '--language LANGUAGE', String, 'Set language') do |language|
+    options[:language] = language
+  end
+  opts.on('-h', '--help', 'Shows help message') do
+    options[:help] = opts.help
+  end
+  opts.on('-v', '--version', 'Shows version') do
+    options[:version] = Guessmail::VERSION
   end
 end
 
-main
+option_parser.parse!
+
+result =
+  if options[:help]
+    options[:help]
+  elsif options[:version]
+    options[:version]
+  elsif [3, 4].include? ARGV.size
+    Guessmail.guess(ARGV, options)
+  else
+    option_parser.help
+  end
+
+STDOUT.write result
