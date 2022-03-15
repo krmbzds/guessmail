@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  pull_request:
+
+  push:
+    branches: [ develop, master ]
+
+env:
+  GIT_COMMIT_SHA: ${{ github.sha }}
+  GIT_BRANCH: ${{ github.ref }}
+  COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    name: lint ${{ matrix.ruby }}
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: [ '2.6.9', '2.7.5', '3.0.3', '3.1.1' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: StandardRB
+        continue-on-error: ${{ matrix.experimental }}
+        run: bundle exec standardrb --parallel --format progress
+
+  test:
+    needs: [ lint ]
+    runs-on: ubuntu-latest
+    name: test ${{ matrix.ruby }}
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: [ '2.6.9', '2.7.5', '3.0.3', '3.1.1' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Test
+        continue-on-error: ${{ matrix.experimental }}
+        run: bundle exec rake
+

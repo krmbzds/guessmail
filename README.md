@@ -1,8 +1,11 @@
 # Guessmail 💌
 
-[![Travis](https://img.shields.io/travis/krmbzds/guessmail.svg)](https://travis-ci.org/krmbzds/guessmail)
-[![Gem](https://img.shields.io/gem/dt/guessmail.svg)](https://rubygems.org/gems/guessmail)
-[![Gem](https://img.shields.io/gem/v/guessmail.svg)](https://rubygems.org/gems/guessmail)
+[![Build Status](https://img.shields.io/github/workflow/status/krmbzds/guessmail/Test/master)](https://github.com/krmbzds/guessmail/actions/workflows/test.yml)
+[![Coveralls](https://img.shields.io/coveralls/github/krmbzds/guessmail)](https://coveralls.io/github/krmbzds/guessmail) 
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/krmbzds/guessmail.svg)](https://codeclimate.com/github/krmbzds/guessmail/maintainability)
+[![Downloads](https://img.shields.io/gem/dt/guessmail.svg)](https://rubygems.org/gems/guessmail)
+[![Gem Version](https://img.shields.io/gem/v/guessmail.svg)](https://rubygems.org/gems/guessmail)
+
 
 [**guessmail**][Guessmail] helps you find possible email addresses of a person.
 
@@ -101,7 +104,7 @@ You can donate me at [Liberapay][Donation]. Thanks! ☕️
 
 ## License
 
-Copyright © 2016-2020 [Kerem Bozdas][Personal Webpage]
+Copyright © 2016-2022 [Kerem Bozdas][Personal Webpage]
 
 This project is available under the terms of the [MIT License][License].
 
