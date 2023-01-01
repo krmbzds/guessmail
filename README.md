@@ -1,6 +1,6 @@
 # Guessmail 💌
 
-[![Build Status](https://img.shields.io/github/workflow/status/krmbzds/guessmail/Test/master)](https://github.com/krmbzds/guessmail/actions/workflows/test.yml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/krmbzds/guessmail/test.yml?branch=master)](https://github.com/krmbzds/guessmail/actions/workflows/test.yml)
 [![Coveralls](https://img.shields.io/coveralls/github/krmbzds/guessmail)](https://coveralls.io/github/krmbzds/guessmail) 
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/krmbzds/guessmail.svg)](https://codeclimate.com/github/krmbzds/guessmail/maintainability)
 [![Downloads](https://img.shields.io/gem/dt/guessmail.svg)](https://rubygems.org/gems/guessmail)
@@ -104,7 +104,7 @@ You can donate me at [Liberapay][Donation]. Thanks! ☕️
 
 ## License
 
-Copyright © 2016-2022 [Kerem Bozdas][Personal Webpage]
+Copyright © 2016-2023 [Kerem Bozdas][Personal Webpage]
 
 This project is available under the terms of the [MIT License][License].
 
