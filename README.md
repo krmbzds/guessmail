@@ -68,10 +68,10 @@ Yes.
 
 This gem is tested against the following Ruby versions:
 
-- ✅ `3.2.1` (stable)
-- ✅ `3.1.3` (stable)
-- ✅ `3.0.5` (stable)
-- ⏳ `2.7.7` (security maintenance)
+- ✅ `3.2.2` (stable)
+- ✅ `3.1.4` (stable)
+- ⏳ `3.0.6` (security maintenance)
+- 🪦 `2.7.8` (end of life)
 
 ## Installation
 
