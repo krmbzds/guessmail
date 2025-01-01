@@ -68,10 +68,11 @@ Yes.
 
 This gem is tested against the following Ruby versions:
 
-- ✅ `3.2.2` (stable)
-- ✅ `3.1.4` (stable)
-- ⏳ `3.0.6` (security maintenance)
-- 🪦 `2.7.8` (end of life)
+- ✅ `3.4.1` (stable)
+- ✅ `3.3.6` (stable)
+- ✅ `3.2.6` (stable)
+- ⏳ `3.1.6` (security maintenance)
+- 🪦 `3.0.7` (end of life)
 
 ## Installation
 
@@ -113,7 +114,7 @@ You can donate me at [Liberapay][Donation]. Thanks! ☕️
 
 ## License
 
-Copyright © 2016-2023 [Kerem Bozdas][Personal Webpage]
+Copyright © 2016-2025 [Kerem Bozdas][Personal Webpage]
 
 This project is available under the terms of the [MIT License][License].
 
